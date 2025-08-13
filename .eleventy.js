@@ -1,7 +1,7 @@
 const projects = require("./source/_data/projects.json");
 const languages = require("./source/_data/languages.json");
 
-// Генерация processedProjects глобально
+// Generating project pages per language
 const processedProjects = [];
 for (let l of languages) {
   for (let p of projects) {
@@ -17,6 +17,7 @@ module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("apps");
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("uploads");
+  eleventyConfig.addPassthroughCopy("downloads");
   eleventyConfig.addCollection("processedProjects", function() {
     return processedProjects;
   });
@@ -26,9 +27,9 @@ module.exports = function(eleventyConfig) {
   });
   return {
     dir: {
-      input: "source",       // исходники
-      includes: "layouts",   // папка с layout внутри source
-      output: "build"        // сборка сюда
+      input: "source", 
+      includes: "layouts",  
+      output: "build" 
     },
     templateFormats: ["njk", "html", "md", "11ty.js", "xml.njk"]
   };

@@ -1,0 +1,9 @@
+[submodule "apps/mrtd-editor"]
+  path = apps/mrtd-editor
+  url = https://github.com/Dev1lroot/MRTDCAD.git
+[submodule "build/apps/mrtd-editor"]
+  path = build/apps/mrtd-editor
+  url = https://github.com/Dev1lroot/MRTDCAD.git
+[submodule "build"]
+  path = build
+  url = https://github.com/Dev1lroot/MyPersonalWebsiteBuild.git
