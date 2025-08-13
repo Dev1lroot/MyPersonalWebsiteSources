@@ -12,5 +12,9 @@
   "description": "",
   "devDependencies": {
     "@11ty/eleventy": "^3.1.2"
+  },
+  "dependencies": {
+    "fast-glob": "^3.3.3",
+    "sitemap": "^8.0.0"
   }
 }
