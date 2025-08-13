@@ -1,0 +1,231 @@
+[
+    {
+        "id": "russian-detention-simulator",
+        "title": {
+            "en-GB": "Russian Detention Simulator",
+            "es-ES": "Simulador de Detención Rusa",
+            "fr-FR": "Simulateur de Détention Russe",
+            "de-DE": "Russischer Haftsimulator",
+            
+            "uk-UA": "Російський симулятор ув'язнення",
+            "ru-RU": "Симулятор российского СИЗО",
+            "he-IL": "סימולטור מעצר רוסי",
+            "ar-AE": "محاكي الاحتجاز الروسي",
+            
+            "hi-IN": "रूसी निरोधक सिम्युलेटर",
+            "zh-CN": "俄罗斯拘留模拟器",
+            "ko-KR": "러시아 구금 시뮬레이터",
+            "ja-JP": "ロシア拘留シミュレーター"
+        },
+        "description": {
+            "en-GB": "Russian Prison Simulator, based on my story of imprisonment, with my own prison cell",
+            "es-ES": "Simulador de prisión rusa, basado en mi historia de encarcelamiento, con mi propia celda",
+            "fr-FR": "Simulateur de prison russe, basé sur mon histoire d'emprisonnement, avec ma propre cellule",
+            "de-DE": "Russischer Gefängnissimulator, basierend auf meiner Geschichte der Inhaftierung, mit eigener Zelle",
+            
+            "uk-UA": "Симулятор російської тюрми, заснований на моїй історії ув'язнення, з моєю власною камерою",
+            "ru-RU": "Симулятор российского СИЗО, основанный на моей истории заключения, с моей собственной камерой",
+            "he-IL": "סימולטור כלא רוסי, מבוסס על סיפור המאסר שלי, עם תא כלא אישי",
+            "ar-AE": "محاكي السجن الروسي، بناءً على قصة سجني، مع زنزانتي الخاصة",
+            
+            "hi-IN": "रूसी जेल सिम्युलेटर, मेरी कारावास कहानी पर आधारित, मेरी खुद की जेल सेल के साथ",
+            "zh-CN": "俄罗斯监狱模拟器，基于我的监禁故事，拥有我自己的牢房",
+            "ko-KR": "러시아 감옥 시뮬레이터, 제 수감 이야기를 기반으로, 나만의 감방 포함",
+            "ja-JP": "ロシア刑務所シミュレーター、私の投獄体験に基づき、私の独自の独房付き"
+        },
+        "keywords": ["Unreal Engine 5", "Games"],
+        "slideshow": [
+            "/uploads/sizo_simulator/screenshots/01.png",
+            "/uploads/sizo_simulator/screenshots/02.jpg",
+            "/uploads/sizo_simulator/screenshots/03.png",
+            "/uploads/sizo_simulator/screenshots/04.png",
+            "/uploads/sizo_simulator/screenshots/05.png",
+            "/uploads/sizo_simulator/screenshots/06.png",
+            "https://www.youtube.com/embed/KZ41UXnwYY0?si=SO33L76Jy8-dCqup"
+        ]
+    },
+    {
+        "id": "database-designer",
+        "title": {
+            "en-GB": "Relational Database Designer",
+            "es-ES": "Diseñador de Bases de Datos Relacionales",
+            "fr-FR": "Concepteur de Bases de Données Relationnelles",
+            "de-DE": "Relationale Datenbank-Designer",
+            
+            "uk-UA": "Дизайнер реляційних баз даних",
+            "ru-RU": "Дизайнер реляционных баз данных",
+            "he-IL": "מעצב מסדי נתונים יחסיים",
+            "ar-AE": "مصمم قاعدة بيانات علائقية",
+            
+            "hi-IN": "संबंधित डेटाबेस डिज़ाइनर",
+            "zh-CN": "关系型数据库设计器",
+            "ko-KR": "관계형 데이터베이스 디자이너",
+            "ja-JP": "リレーショナルデータベースデザイナー"
+        },
+        "description": {
+            "en-GB": "Free Database Designer for relational databases (only innodb syntax is supported for now)",
+            "es-ES": "Diseñador de bases de datos gratuito para bases de datos relacionales (solo se admite la sintaxis innodb por ahora)",
+            "fr-FR": "Concepteur de base de données gratuit pour bases relationnelles (seule la syntaxe innodb est prise en charge pour le moment)",
+            "de-DE": "Kostenloser Datenbank-Designer für relationale Datenbanken (derzeit wird nur InnoDB-Syntax unterstützt)",
+            
+            "uk-UA": "Безкоштовний дизайнер баз даних для реляційних баз (поки що підтримується лише синтаксис innodb)",
+            "ru-RU": "Бесплатный дизайнер баз данных для реляционных баз (пока поддерживается только синтаксис innodb)",
+            "he-IL": "מעצב מסדי נתונים חינמי למסדי נתונים יחסיים (תמיכה כרגע רק בסינטקס innodb)",
+            "ar-AE": "مصمم قاعدة بيانات مجاني لقواعد البيانات العلائقية (مدعوم فقط صياغة innodb حالياً)",
+            
+            "hi-IN": "संबंधित डेटाबेस के लिए मुफ्त डेटाबेस डिज़ाइनर (अभी केवल innodb सिंटैक्स समर्थित है)",
+            "zh-CN": "关系型数据库的免费数据库设计器（目前仅支持innodb语法）",
+            "ko-KR": "관계형 데이터베이스용 무료 데이터베이스 디자이너 (현재 InnoDB 문법만 지원)",
+            "ja-JP": "リレーショナルデータベース用の無料デザイナー（現在はInnoDB構文のみサポート）"
+        },
+        "keywords": ["Web"],
+        "slideshow": [
+            "/uploads/dbdesigner/01.png"
+        ],
+        "links": [
+            {
+                "icon": "fa-solid fa-rocket",
+                "title": "Try Online",
+                "target":"/apps/dbdesigner/"
+            }
+        ]
+    },
+    {
+        "id": "machine-readable-travel-document-editor",
+        "title": {
+            "en-GB": "ICAO-9303 MRTD Editor Software",
+            "es-ES": "Software Editor de MRTD ICAO-9303",
+            "fr-FR": "Logiciel Éditeur MRTD ICAO-9303",
+            "de-DE": "ICAO-9303 MRTD-Editor-Software",
+            
+            "uk-UA": "Редактор для MRTD ICAO-9303",
+            "ru-RU": "Редактор для MRTD ICAO-9303",
+            "he-IL": "תוכנת עורך MRTD ICAO-9303",
+            "ar-AE": "برنامج محرر MRTD ICAO-9303",
+            
+            "hi-IN": "ICAO-9303 MRTD संपादक सॉफ्टवेयर",
+            "zh-CN": "ICAO-9303 可机读旅行证件编辑软件",
+            "ko-KR": "ICAO-9303 MRTD 편집기 소프트웨어",
+            "ja-JP": "ICAO-9303 MRTD エディターソフトウェア"
+        },
+        "description": {
+            "en-GB": "ICAO-9303 Machine Readable Travel Documents designing and development software",
+            "es-ES": "Software para diseñar y desarrollar Documentos de Viaje Legibles por Máquina ICAO-9303",
+            "fr-FR": "Logiciel de conception et développement de Documents de Voyage Lisibles par Machine ICAO-9303",
+            "de-DE": "Software zur Gestaltung und Entwicklung von maschinenlesbaren Reisedokumenten ICAO-9303",
+            
+            "uk-UA": "Програмне забезпечення для розробки та дизайну машинночитабельних проїзних документів ICAO-9303",
+            "ru-RU": "Программное обеспечение для проектирования и разработки машиночитаемых проездных документов ICAO-9303",
+            "he-IL": "תוכנה לעיצוב ופיתוח מסמכי נסיעה לקריאה מכנית ICAO-9303",
+            "ar-AE": "برنامج لتصميم وتطوير مستندات السفر القابلة للقراءة آلياً ICAO-9303",
+            
+            "hi-IN": "ICAO-9303 मशीन-पठनीय यात्रा दस्तावेज़ डिज़ाइन और विकास सॉफ्टवेयर",
+            "zh-CN": "ICAO-9303 可机读旅行证件设计与开发软件",
+            "ko-KR": "ICAO-9303 기계 판독 여행 문서 설계 및 개발 소프트웨어",
+            "ja-JP": "ICAO-9303 機械可読渡航文書の設計・開発ソフトウェア"
+        },
+        "keywords": ["Vue", "Javascript", "Web"],
+        "slideshow": [
+            "/uploads/mrtd_editor/screenshots/01.png"
+        ],
+        "links": [
+            {
+                "icon": "fa-solid fa-rocket",
+                "title": "Try Online",
+                "target":"/apps/mrtd-editor/"
+            },
+            {
+                "icon": "fa-brands fa-github",
+                "title": "Visit Project",
+                "target":"https://github.com/Dev1lroot/MRTDCAD"
+            }
+        ]
+    },
+    {
+        "id": "command-line-mineswepper-on-nim",
+        "title": {
+            "en-GB": "Commandline Minesweeper",
+            "es-ES": "Buscaminas en línea de comandos",
+            "fr-FR": "Démineur en ligne de commande",
+            "de-DE": "Kommandozeilen-Minesweeper",
+            
+            "uk-UA": "Командний Сапер",
+            "ru-RU": "Сапер в командной строке",
+            "he-IL": "מיינסוויפר שורת פקודה",
+            "ar-AE": "لعبة Minesweeper عبر سطر الأوامر",
+            
+            "hi-IN": "कमान्डलाइन माइनस्वीपर",
+            "zh-CN": "命令行扫雷",
+            "ko-KR": "커맨드라인 지뢰찾기",
+            "ja-JP": "コマンドラインマインスイーパー"
+        },
+        "description": {
+            "en-GB": "A Commandline Minesweeper example written in Nim programming Language",
+            "es-ES": "Un ejemplo de Buscaminas en línea de comandos escrito en el lenguaje de programación Nim",
+            "fr-FR": "Un exemple de Démineur en ligne de commande écrit en langage de programmation Nim",
+            "de-DE": "Ein Kommandozeilen-Minesweeper-Beispiel in der Programmiersprache Nim",
+            
+            "uk-UA": "Приклад командного сапера, написаний мовою програмування Nim",
+            "ru-RU": "Пример игры Сапер в командной строке, написанный на языке Nim",
+            "he-IL": "דוגמה ל-Minesweeper בשורת הפקודה שנכתבה בשפת Nim",
+            "ar-AE": "مثال على لعبة Minesweeper عبر سطر الأوامر مكتوبة بلغة Nim",
+            
+            "hi-IN": "Nim प्रोग्रामिंग भाषा में लिखा गया कमांडलाइन माइनस्वीपर उदाहरण",
+            "zh-CN": "用Nim编程语言编写的命令行扫雷示例",
+            "ko-KR": "Nim 프로그래밍 언어로 작성된 커맨드라인 지뢰찾기 예제",
+            "ja-JP": "Nimプログラミング言語で書かれたコマンドラインマインスイーパーの例"
+        },
+        "keywords": ["Nim"],
+        "slideshow": [
+          "https://github.com/Dev1lroot/NimSwepper/raw/main/screenshot.png"
+        ],
+        "links": [
+            {
+                "icon": "fa-brands fa-github",
+                "title": "Visit Project",
+                "target":"https://github.com/Dev1lroot/NimSwepper"
+            }
+        ]
+    },
+    {
+        "id": "fallout-like-termlink-emulator",
+        "title": {
+            "en-GB": "Termlink Emulator",
+            "es-ES": "Emulador Termlink",
+            "fr-FR": "Émulateur Termlink",
+            "de-DE": "Termlink-Emulator",
+            "uk-UA": "Емулятор Termlink",
+            "ru-RU": "Эмулятор Termlink",
+            "he-IL": "אמולטור Termlink",
+            "ar-AE": "محاكي Termlink",
+            "hi-IN": "टर्मलिंक एमुलेटर",
+            "zh-CN": "Termlink 模拟器",
+            "ko-KR": "Termlink 에뮬레이터",
+            "ja-JP": "Termlink エミュレーター"
+        },
+        "description": {
+            "en-GB": "CLI emulator of RobCo Industries (TM) TermLink from the Fallout series. Created by a fan for fans. Includes hacking and custom menu mapping. All Fallout trademarks belong to Bethesda Softworks. This software is unofficial and has no affiliation with Bethesda.",
+            "es-ES": "Emulador CLI de TermLink de RobCo Industries (TM) de la serie Fallout. Creado por un fan para fans. Incluye hacking y mapeo de menús personalizado. Todas las marcas de Fallout pertenecen a Bethesda Softworks. Este software es no oficial y no está afiliado a Bethesda.",
+            "fr-FR": "Émulateur CLI de TermLink de RobCo Industries (TM) de la série Fallout. Créé par un fan pour les fans. Comprend le piratage et la personnalisation des menus. Toutes les marques Fallout appartiennent à Bethesda Softworks. Ce logiciel est non officiel et n'a aucun lien avec Bethesda.",
+            "de-DE": "CLI-Emulator von RobCo Industries (TM) TermLink aus der Fallout-Serie. Von einem Fan für Fans erstellt. Enthält Hacking und benutzerdefinierte Menüzuordnung. Alle Fallout-Marken gehören Bethesda Softworks. Diese Software ist inoffiziell und nicht mit Bethesda verbunden.",
+            "uk-UA": "CLI-емулятор TermLink від RobCo Industries (TM) із серії Fallout. Створено фанатом для фанатів. Містить хакінг і налаштування меню. Всі торгові марки Fallout належать Bethesda Softworks. Це програмне забезпечення неофіційне і не пов'язане з Bethesda.",
+            "ru-RU": "CLI-эмулятор TermLink от RobCo Industries (TM) из серии Fallout. Создан фанатом для фанатов. Включает взлом и настройку меню. Все торговые марки Fallout принадлежат Bethesda Softworks. Программа неофициальная, не связана с Bethesda.",
+            "he-IL": "אמולטור CLI של TermLink מחברת RobCo Industries (TM) מסדרת Fallout. נוצר על ידי מעריץ למעריצים. כולל פריצה ומיפוי תפריטים מותאם אישית. כל סימני המסחר של Fallout שייכים ל-Bethesda Softworks. תוכנה זו אינה רשמית ואינה קשורה ל-Bethesda.",
+            "ar-AE": "محاكي CLI لـ TermLink من RobCo Industries (TM) من سلسلة Fallout. تم إنشاؤه بواسطة معجب لمحبي اللعبة. يتضمن الاختراق وتخصيص قوائم. جميع العلامات التجارية لفول آوت مملوكة لشركة Bethesda Softworks. هذا البرنامج غير رسمي ولا يرتبط بـ Bethesda.",
+            "hi-IN": "CLI एमुलेटर RobCo Industries (TM) TermLink, Fallout श्रृंखला से। फैन द्वारा फैंस के लिए बनाया गया। इसमें हैकिंग और कस्टम मेनू मैपिंग शामिल है। सभी Fallout ट्रेडमार्क Bethesda Softworks के हैं। यह सॉफ़्टवेयर अनौपचारिक है और Bethesda से संबद्ध नहीं है।",
+            "zh-CN": "RobCo Industries (TM) TermLink 的 CLI 模拟器，来自 Fallout 系列。由粉丝为粉丝制作。包括破解和自定义菜单映射。所有 Fallout 商标归 Bethesda Softworks 所有。本软件非官方，与 Bethesda 无关。",
+            "ko-KR": "Fallout 시리즈의 RobCo Industries (TM) TermLink CLI 에뮬레이터. 팬이 팬을 위해 제작. 해킹과 커스텀 메뉴 매핑 포함. 모든 Fallout 상표는 Bethesda Softworks 소유. 이 소프트웨어는 비공식이며 Bethesda와 관련 없음.",
+            "ja-JP": "FalloutシリーズのRobCo Industries (TM) TermLinkのCLIエミュレーター。ファンによるファンのための制作。ハッキングとカスタムメニューのマッピングを含む。すべてのFallout商標はBethesda Softworksの所有。このソフトウェアは非公式でBethesdaとは無関係です。"
+        },
+        "keywords": ["Nim"],
+        "slideshow": [],
+        "links": [
+            {
+                "icon": "fa-brands fa-github",
+                "title": "Visit Project",
+                "target":"https://github.com/Dev1lroot/robco"
+            }
+        ]
+    }
+]
+  

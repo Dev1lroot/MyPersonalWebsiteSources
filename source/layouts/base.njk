@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="{{ config.language.code }}">
+<head>
+  {% block head %}
+      {% include "base.head.njk" %}
+  {% endblock %}
+</head>
+<body>
+  <main>
+    {% include "dialogs.njk" %}
+    {% if article %}
+      {% include "article.njk" %}
+    {% else %}
+      {% if config.language.style == "right-handed" %}
+          {% include "menu.njk" %}
+          {% include "page.njk" %}
+      {% else %}
+          {% include "page.njk" %}
+          {% include "menu.njk" %}
+      {% endif %}
+    {% endif %}
+  </main>
+  <canvas id="background" class="background"></canvas>
+</body>

@@ -1,0 +1,49 @@
+.article-page .content img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+.article-page .wayback{
+    width: 100%;
+    flex-grow: 1;
+    background-color: transparent;
+    color: #FFFFFF90;
+}
+.article-page .wayback:hover{
+    color: #FFF;
+}
+.article-page .youtube-iframe{
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 8px;
+}
+.article-page .options{
+    display: flex;
+    gap: 8px;
+    margin: 10px 0px;
+}
+.article-page .option-link{
+    background-color: #FFFFFF16;
+    color: #FFF;
+    text-decoration: none;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 42px;
+    padding: 0px 10px;
+    max-width: fit-content;
+    transition: background .3s;
+}
+.article-page .option-link i{
+    padding-right: 8px;
+}
+.article-page .option-link:hover{
+    background-color: #FFFFFF30;
+}
+.article-page article{
+    padding: 24px;
+    background-color: #FFFFFF10;
+    border-radius: 16px;
+}

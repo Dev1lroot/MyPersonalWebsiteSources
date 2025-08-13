@@ -1,0 +1,12 @@
+<section class="page full-size article-page" id="page-wrapper">
+  <div class="header">
+    <a class="wayback" href="/{{config.language.lang}}/"><i class="fas fa-arrow-left"></i> Back</a>
+    {% include "component.language-button.njk" %}
+  </div>
+  <article>
+    <h2>{{ article.title[config.language.code] }}</h2>
+    <div class="content">
+      {{ content | safe }}
+    </div>
+  </article>
+</section>

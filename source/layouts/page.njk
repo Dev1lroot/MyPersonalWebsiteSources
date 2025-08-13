@@ -1,0 +1,36 @@
+<section class="page" id="page-wrapper">
+    {% include "page.header.njk" %}
+    {% include "page.profile.njk" %}
+    {% include "page.socials.njk" %}
+    <div class="content {{config.language.style}}">
+        <div class="feed" v-if="page == ''">
+          {% for article in articles %}
+            {% if article.language == config.language.code %}
+              <article class="post">
+                  <p>{{ getArticle[article.filename] | safe }}</p>
+                  <p class="post-date"><b v-html="new Date({{ article.publishedAt }}).toLocaleDateString()"></b></p>
+              </article>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="feed" v-if="page == 'projects'">
+          {% for project in projects %}
+            <article>
+                <h3><a href="/{{ config.language.lang }}/projects/{{ project.id }}/">{{ project.title[config.language.code] }}</a></h3>
+                <p>{{ project.description[config.language.code] }}</p>
+                <div class="keywords">
+                  {% for keyword in project.keywords %}
+                  <a href="https://google.com/?q={{keyword}}">{{keyword}}</a>
+                  {% endfor %}
+                </div>
+            </article>
+          {% endfor %}
+        </div>
+        <div class="contact-form" v-if="page == 'contact_me'">
+            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Email address">
+            <textarea placeholder="Your message starts here.."></textarea>
+            <button>{{ locale.btn_send[config.language.code] }}</button>
+        </div>
+    </div>
+</section>

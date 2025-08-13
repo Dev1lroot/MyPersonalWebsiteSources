@@ -1,0 +1,7 @@
+<div class="socials">
+  {% for social in socials %}
+    {% if social.enabled %}
+      <a href="{{ social.url }}" title="{{ social.title }}"><i class="{{ social.icon }}"></i></a>
+    {% endif %}
+  {% endfor %}
+</div>

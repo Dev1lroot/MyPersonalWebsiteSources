@@ -1,0 +1,44 @@
+.feed{
+    display: grid;
+    grid: 1 1fr;
+    gap: 10px;
+}
+.feed article{
+    background-color: #FFFFFF10;
+    padding: var(--border-radius);
+    border-radius: var(--border-radius);
+}
+.feed article .keywords{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+}
+.feed article .keywords a{
+    display: block;
+    background-color: #FFFFFF10;
+    color: #FFF;
+    line-height: 32px;
+    padding: 0px 12px;
+    border-radius: 16px;
+}
+.feed article h2{
+    margin-bottom: 10px;
+}
+.post-date{
+    margin-top: 10px;
+}
+.feed article a{
+    text-decoration: underline;
+    color: #FFF !important;
+    cursor: pointer;
+}
+.feed article li{
+    margin-left: 24px;
+    line-height: 16px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+.feed article ul{
+    margin: 10px 0px;
+}

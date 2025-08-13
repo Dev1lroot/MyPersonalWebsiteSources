@@ -1,0 +1,74 @@
+[
+  {
+    "enabled": true,
+    "title": "Twitter",
+    "url": "https://x.com/DavyBoyAB",
+    "icon": "fa-brands fa-x-twitter"
+  },
+  {
+    "enabled": true,
+    "title": "Instagram",
+    "url": "https://www.instagram.com/davyboyab/",
+    "icon": "fa-brands fa-instagram"
+  },
+  {
+    "enabled": true,
+    "title": "Ko-fi",
+    "url": "https://ko-fi.com/davideichendorf",
+    "icon": "fa-solid fa-mug-hot"
+  },
+  {
+    "enabled": true,
+    "title": "NGL",
+    "url": "https://ngl.link/davyboyab",
+    "icon": "fa-solid fa-question"
+  },
+  {
+    "enabled": true,
+    "title": "LinkedIn",
+    "url": "https://www.linkedin.com/in/david-eichendorf-79aa7a25a/",
+    "icon": "fa-brands fa-linkedin"
+  },
+  {
+    "enabled": true,
+    "title": "GitHub",
+    "url": "https://github.com/dev1lroot",
+    "icon": "fa-brands fa-github"
+  },
+  {
+    "enabled": true,
+    "title": "SoundCloud",
+    "url": "https://soundcloud.com/dev1lroot",
+    "icon": "fa-brands fa-soundcloud"
+  },
+  {
+    "enabled": true,
+    "title": "YouTube",
+    "url": "https://www.youtube.com/channel/UCwqy0PbQfsVXCpuC-f6ROoQ",
+    "icon": "fa-brands fa-youtube"
+  },
+  {
+    "enabled": true,
+    "title": "Sketchfab",
+    "url": "https://sketchfab.com/dev1lroot",
+    "icon": "fa-solid fa-cube"
+  },
+  {
+    "enabled": true,
+    "title": "DeviantArt",
+    "url": "https://www.deviantart.com/dev1lroot",
+    "icon": "fa-brands fa-deviantart"
+  },
+  {
+    "enabled": true,
+    "title": "Telegram",
+    "url": "https://t.me/dev1lroot",
+    "icon": "fa-brands fa-telegram"
+  },
+  {
+    "enabled": true,
+    "title": "Steam",
+    "url": "https://steamcommunity.com/id/dev1lroot/",
+    "icon": "fa-brands fa-steam"
+  }
+]

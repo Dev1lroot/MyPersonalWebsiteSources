@@ -1,0 +1,24 @@
+<section class="menu {{config.language.style}}">
+    <nav>
+        <a href="/downloads/cv_{{config.language.code}}.pdf" download="cv.pdf">
+          {% if config.language.style == "right-handed" %}
+            <i class="fa-solid fa-download"></i>
+            <span>{{ locale.btn_download_cv[config.language.code] }}</span>
+          {% else %}
+            <span>{{ locale.btn_download_cv[config.language.code] }}</span>
+            <i class="fa-solid fa-download"></i>
+          {% endif %}
+        </a>
+        {% for menuItem in navigation %}
+        <a :class="(page == '{{menuItem.path}}') ? 'active' : ''" @click="setPage('{{config.language.lang}}','{{menuItem.path}}')">
+          {% if config.language.style == "right-handed" %}
+            <i class="{{ menuItem.icon }}"></i>
+            <span>{{ locale[menuItem.lang][config.language.code] }}</span>
+          {% else %}
+            <span>{{ locale[menuItem.lang][config.language.code] }}</span>
+            <i class="{{ menuItem.icon }}"></i>
+          {% endif %}
+        </a>
+        {% endfor %}
+    </nav>
+</section>

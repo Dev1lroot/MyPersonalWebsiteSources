@@ -1,0 +1,9 @@
+<div class="header {{config.language.style}}">
+  {% if config.language.style == "right-handed" %}
+    <h1>{{ profile.name[config.language.code] }}</h1>
+    {% include "component.language-button.njk" %}
+  {% else %}
+    {% include "component.language-button.njk" %}
+    <h1>{{ profile.name[config.language.code] }}</h1>
+  {% endif %}
+</div>

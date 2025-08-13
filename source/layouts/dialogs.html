@@ -1,0 +1,75 @@
+    <dialog v-if="dialogs.includes('ganth-diagram')" style="max-width: 900px;">
+            <div class="header">
+                <h2>{{getLocaleString('txt_my_life')}}</h2>
+                <button class="close" @click="closeDialog('ganth-diagram')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="ganth-diagram-container" id="ganth-diagram-container">
+                <canvas id="ganth-diagram" class="ganth-diagram"></canvas>
+            </div>
+        </dialog>
+        <dialog v-if="dialogs.includes('project_preview')" style="max-width: 900px;">
+            <div class="header">
+                <h2>{{projects[project.id].title}}</h2>
+                <button class="close" @click="closeDialog('project_preview')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="slideshow" v-if="projects[project.id].hasOwnProperty('slideshow') && projects[project.id].slideshow.slides.length > 0">
+                <div v-if="projects[project.id].slideshow.slides.length > 1" class="slideshow__dots">
+                    <a v-for="dot,id in projects[project.id].slideshow.slides" @click="projects[project.id].slideshow.position = id" :class="(id == projects[project.id].slideshow.position) ? 'active' : ''"></a>
+                </div>
+                <div class="slideshow__frames">
+                    <a v-if="projects[project.id].slideshow.slides.length > 1" class="slideshow__next" @click="projects[project.id].slideshow.next()"><i class="fas fa-chevron-circle-right"></i></a>
+                    <a v-if="projects[project.id].slideshow.slides.length > 1" class="slideshow__prev" @click="projects[project.id].slideshow.prev()"><i class="fas fa-chevron-circle-left"></i></a>
+                    <div>
+                        <iframe v-if="projects[project.id].slideshow.current().type == 'youtube'" width="100%" height="auto" style="aspect-ratio: 16/9; width: 100%; height: auto" 
+                            :src="projects[project.id].slideshow.current().data" 
+                            title="YouTube video player" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                        <img :src="projects[project.id].slideshow.current().data" width="100%" height="auto" v-else>
+                    </div>
+                </div>
+            </div>
+            <div class="description">
+                {{ projects[project.id].description }}
+            </div>
+            <div v-if="projects[project.id].hasOwnProperty('links')" class="project-buttons">
+                <a v-for="link in projects[project.id].links" :href="link.target" class="button-simple" target="_blank">
+                    <i v-if="link.hasOwnProperty('icon')" :class="link.icon"></i>
+                    {{link.title}}
+                </a>
+            </div>
+        </dialog>
+        <dialog v-if="dialogs.includes('message_sent')">
+            <div class="header">
+                <h2 v-html="getLocaleString('txt_message_sent')"></h2>
+                <button class="close" @click="closeDialog('languages')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="send-me-message-rc">
+
+            </div>
+        </dialog>
+        <dialog v-if="dialogs.includes('confirm_message')">
+            <div class="header">
+                <h2 v-html="getLocaleString('txt_confirm_submission')"></h2>
+                <button class="close" @click="closeDialog('languages')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div id="send-me-message-rc">
+
+            </div>
+        </dialog>
+        <dialog v-if="dialogs.includes('languages')">
+            <div class="header">
+                <h2>Select Language</h2>
+                <button class="close" @click="closeDialog('languages')"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="languages">
+                {% for language in languages %}
+                <a :alt="language.name" :href="'https://dev1lroot.com/'+language.code.split('-')[0]+'/'">
+                    <i :style="'background-image: url(/assets/flags/'+language.code.split('-')[1].toLowerCase()+'.svg);'"></i>
+                    <span>{{ language.name }}</span>
+                </a>
+                {% endfor %}
+            </div>            
+        </dialog>

@@ -1,0 +1,14 @@
+[
+  { "lang": "en", "flag":"gb", "enabled": true, "code": "en-GB", "name": "English", "style": "right-handed"  },
+  { "lang": "es", "flag":"es", "enabled": false, "code": "es-ES", "name": "Español", "style": "right-handed"  },
+  { "lang": "fr", "flag":"fr", "enabled": false, "code": "fr-FR", "name": "Français", "style": "right-handed"  },
+  { "lang": "de", "flag":"de", "enabled": false, "code": "de-DE", "name": "Deutsch", "style": "right-handed"  },
+  { "lang": "ua", "flag":"ua", "enabled": false, "code": "uk-UA", "name": "Українська", "style": "right-handed"  },
+  { "lang": "ru", "flag":"ru", "enabled": true, "code": "ru-RU", "name": "Русский", "style": "right-handed"  },
+  { "lang": "he", "flag":"il", "enabled": false, "code": "he-IL", "name": "עִבְרִית", "style": "left-handed" },
+  { "lang": "ar", "flag":"ae", "enabled": false, "code": "ar-AE", "name": "العربية", "style": "left-handed" },
+  { "lang": "hi", "flag":"in", "enabled": false, "code": "hi-IN", "name": "हिन्दी", "style": "right-handed"  },
+  { "lang": "zh", "flag":"cn", "enabled": false, "code": "zh-CN", "name": "中文", "style": "right-handed" },
+  { "lang": "ko", "flag":"kr", "enabled": false, "code": "ko-KR", "name": "한국어", "style": "right-handed" },
+  { "lang": "jp", "flag":"jp", "enabled": false, "code": "ja-JP", "name": "日本語", "style": "right-handed"  }
+]

@@ -1,0 +1,8 @@
+<a @click="openDialog('languages')" class="language-button">
+  {% for language in languages %}
+    {% if language.code == config.language.code %}
+      {{ language.name }}
+      <i style="background-image: url(/assets/flags/{{ language.flag }}.svg);"></i>
+    {% endif %}
+  {% endfor %}
+</a>

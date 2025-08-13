@@ -1,0 +1,17 @@
+---
+title: "Home"
+pagination:
+  data: languages
+  size: 1
+  alias: lang
+permalink: "{{ lang.lang }}/index.html"
+
+eleventyComputed:
+  config:
+    language:
+      code: "{{ lang.code }}"
+      lang: "{{ lang.lang }}"
+      style: "{{ lang.style }}"
+
+layout: "base.njk"
+---

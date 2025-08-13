@@ -1,0 +1,36 @@
+<meta charset="UTF-8">
+
+<meta http-equiv="Content-Language" content="{{ config.language.code }}">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
+<meta name="keywords" content="David, {{ profile.name[config.language.code] }}, Eichendorf, David Eichendorf, Software Developer, Refugee, Activist">
+<meta name="author" content="{{ profile.name[config.language.code] }}">
+<meta name="robots" content="index, follow">
+
+<meta property="og:title" content="{{ profile.name[config.language.code] }}">
+<meta property="og:description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
+<meta property="og:image" content="/assets/opengraph/placeholder.png">
+<meta property="og:url" content="{{ lang }}">
+
+<meta name="twitter:card" content="/assets/opengraph/placeholder.png">
+<meta name="twitter:title" content="{{ profile.name[config.language.code] }}">
+<meta name="twitter:description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
+<meta name="twitter:image" content="/assets/opengraph/placeholder.png">
+<title>{{ profile.name[config.language.code] }} | {{ title }}</title>
+<link rel="canonical" href="{{ page.url | url }}">
+
+<link rel="stylesheet" href="/assets/main.css">
+<link rel="stylesheet" href="/assets/fontawesome-free-6.6.0-web/css/all.min.css">
+
+{% for lang in languages %}
+  {% if lang.code != config.language.code %}
+    <link rel="alternate" hreflang="{{ lang.lang }}" href="{{ page.url.replace(config.language.lang,lang.lang) }}">
+  {% endif %}
+{% endfor %}
+
+<script type="text/javascript" src="/assets/scripts/vue.global.js"></script>
+<script type="text/javascript" src="/assets/scripts/classes/Slideshow.js"></script>
+<script type="text/javascript" src="/assets/scripts/main.js" defer></script>
+<script type="text/javascript" src="/assets/scripts/background.js" defer></script>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
