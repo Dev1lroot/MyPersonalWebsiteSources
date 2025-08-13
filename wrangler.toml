@@ -1,0 +1,7 @@
+name = "website-builder"
+main = "default"
+compatibility_date = "2025-08-14"
+
+[site]
+bucket = "./build"
+entry-point = "default"
