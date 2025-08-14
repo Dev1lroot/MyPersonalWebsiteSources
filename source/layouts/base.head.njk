@@ -11,7 +11,7 @@
 <meta property="og:title" content="{{ profile.name[config.language.code] }}">
 <meta property="og:description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
 <meta property="og:image" content="/assets/opengraph/placeholder.png">
-<meta property="og:url" content="{{ lang }}">
+<meta property="og:url" content="{{ page.url | url }}">
 
 <meta name="twitter:card" content="/assets/opengraph/placeholder.png">
 <meta name="twitter:title" content="{{ profile.name[config.language.code] }}">
@@ -25,7 +25,7 @@
 
 {% for lang in languages %}
   {% if lang.code != config.language.code %}
-    <link rel="alternate" hreflang="{{ lang.lang }}" href="{{ page.url.replace(config.language.lang,lang.lang) }}">
+    <link rel="alternate" hreflang="{{ lang.lang }}" href="{{ website.domain }}{{ page.url.replace(config.language.lang,lang.lang) }}">
   {% endif %}
 {% endfor %}
 
@@ -37,3 +37,59 @@
 <script type="text/javascript" src="/assets/scripts/main.js" defer></script>
 <script type="text/javascript" src="/assets/scripts/background.js" defer></script>
 <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+<script type="application/ld+json">
+
+{% if config.schema == "main" %}
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ profile.name[config.language.code] }}",
+  "alternateName": "Dev1lroot",
+  "jobTitle": "Software Developer",
+  "url": "{{ website.domain }}{{ page.url | url }}",
+  "image": "{{ website.domain }}/assets/images/me.png",
+  "sameAs": [
+    {% for link in socials %}
+    "{{link.url}}"{% if not loop.last %},{% endif %}
+    {% endfor %}
+  ],
+  "knowsLanguage": ["Russian", "English"],
+  "birthDate": "{{ profile.dob }}",
+  "email": "mailto:{{ profile.email }}",
+  "telephone": "{{ profile.phone }}",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "{{ profile.city }}",
+    "addressCountry": "{{ profile.country }}"
+  },
+  "description": "{{ profile.description[config.language.code] }}"
+}
+{% endif %}
+
+{% if config.schema == "project" %}
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ title }}",
+  "alternateName": "{{ titleEng }}",
+  "url": "{{ website.domain }}{{ page.url | url }}",
+  "description": "{{ description }}",
+  "image": "{{ website.domain }}/assets/images/sizo-sim.png",
+  "dateCreated": "2023-08-15",
+  "datePublished": "2026-09-01",
+  "author": {
+    "@type": "Person",
+    "name": "{{ profile.name[config.language.code] }}",
+    "alternateName": "Dev1lroot",
+    "url": "{{ website.domain }}/en/",
+    "sameAs": [
+      {% for link in socials %}
+      "{{link.url}}"{% if not loop.last %},{% endif %}
+      {% endfor %}
+    ]
+  }
+}
+{% endif %}
+
+</script>

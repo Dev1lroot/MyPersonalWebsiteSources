@@ -3,7 +3,7 @@
   { "lang": "es", "flag":"es", "enabled": false, "code": "es-ES", "name": "Español", "style": "right-handed"  },
   { "lang": "fr", "flag":"fr", "enabled": false, "code": "fr-FR", "name": "Français", "style": "right-handed"  },
   { "lang": "de", "flag":"de", "enabled": false, "code": "de-DE", "name": "Deutsch", "style": "right-handed"  },
-  { "lang": "ua", "flag":"ua", "enabled": false, "code": "uk-UA", "name": "Українська", "style": "right-handed"  },
+  { "lang": "uk", "flag":"ua", "enabled": false, "code": "uk-UA", "name": "Українська", "style": "right-handed"  },
   { "lang": "ru", "flag":"ru", "enabled": true, "code": "ru-RU", "name": "Русский", "style": "right-handed"  },
   { "lang": "he", "flag":"il", "enabled": false, "code": "he-IL", "name": "עִבְרִית", "style": "left-handed" },
   { "lang": "ar", "flag":"ae", "enabled": false, "code": "ar-AE", "name": "العربية", "style": "left-handed" },

@@ -1,4 +1,9 @@
 {
+    "phone": "+33780093303",
+    "email": "admin@dev1lroot.com",
+    "country": "FR",
+    "city": "Saint-Brieuc",
+    "dob": "1999-04-25",
     "name": {
         "en-GB": "David von Eichendorf",
         "es-ES": "David von Eichendorf",
@@ -26,5 +31,8 @@
         "zh-CN": "ABDL 🌈 | 同性恋 🏳️‍🌈 | 软件开发者 ⚙️ | 难民 🇫🇷 | Adultbaby.ru 创始人 | SIZO-SIM 创作者 | 支持乌克兰 🇺🇦",
         "ko-KR": "ABDL 🌈 | 게이 🏳️‍🌈 | 소프트웨어 개발자 ⚙️ | 난민 🇫🇷 | Adultbaby.ru 설립자 | SIZO-SIM 제작자 | 우크라이나를 지지합니다 🇺🇦",
         "ja-JP": "ABDL 🌈 | ゲイ 🏳️‍🌈 | ソフトウェア開発者 ⚙️ | 難民 🇫🇷 | Adultbaby.ru 創設者 | SIZO-SIM 作成者 | ウクライナを支援 🇺🇦"
+    },
+    "bio": {
+        "ru-RU": ""
     }
 }

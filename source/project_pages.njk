@@ -8,12 +8,16 @@ permalink: "{{ item.url }}"
 eleventyComputed:
   config:
     jsp: ""
+    schema: "project"
     language:
       code: "{{ item.language.code }}"
       lang: "{{ item.language.lang }}"
       style: "{{ item.language.style }}"
   article: true
   title: "{{ item.project.title[item.language.code] }}"
+  titleEng: "{{ item.project.title['en-GB'] }}"
+  description: "{{ item.project.description[item.language.code] }}"
+  project: item.project
 
 layout: "base.njk"
 ---
