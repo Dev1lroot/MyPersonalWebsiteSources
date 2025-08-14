@@ -1,0 +1,46 @@
+---
+pagination:
+  data: collections.processedProjects
+  size: 1
+  alias: item
+permalink: "{{ item.url }}"
+
+eleventyComputed:
+  config:
+    jsp: ""
+    language:
+      code: "{{ item.language.code }}"
+      lang: "{{ item.language.lang }}"
+      style: "{{ item.language.style }}"
+  article: true
+  title: "{{ item.project.title[item.language.code] }}"
+
+layout: "base.njk"
+---
+<h1>{{ item.project.title[item.language.code] }}</h1>
+<p>{{ item.project.description[item.language.code] }}</p>
+{% if 'links' in item.project %}
+  <div class="options">
+    {% for link in item.project.links %}
+        <a class="option-link" href="{{link.target}}"><i class="{{link.icon}}"></i> {{link.title}}</a>
+    {% endfor %}
+  </div>
+{% endif %}
+{% if 'slideshow' in item.project %}
+  <div class="screenshots">
+    {% for screenshot in item.project.slideshow %}
+        {% if screenshot | includes('youtube') %}
+          <iframe
+            class="youtube-iframe"
+            src="{{screenshot}}"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        {% else %}
+           <img src="{{screenshot}}">
+        {% endif %}
+    {% endfor %}
+  </div>
+{% endif %}

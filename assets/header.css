@@ -31,3 +31,23 @@
 .header .language-button{
     min-width: fit-content;
 }
+@media only screen and (max-width: 480px) {
+    .header .language-button span{
+        display: none;
+    }
+    .header .language-button{
+        width: 48px;
+        height: 48px;
+        border-radius: 24px;
+        padding: 0px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .header .language-button i{
+        width: 100%;
+        height: auto;
+        aspect-ratio: 1/1;
+    }
+}

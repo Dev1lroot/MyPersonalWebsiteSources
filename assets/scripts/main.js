@@ -1,9 +1,8 @@
-var app = Vue.createApp({
-    data() {
-        return {
-            page: "",
-            dialogs: []
-        }
+var app = new Vue({
+    el: "main",
+    data: {
+        page: "",
+        dialogs: []
     },
     methods: {
         setPage(lang = 'en', page = '')
@@ -33,4 +32,5 @@ var app = Vue.createApp({
         }
     }
 });
-app.mount("main");
+//app.getPage();
+app.page = initial_page;
