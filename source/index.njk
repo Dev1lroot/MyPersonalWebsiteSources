@@ -1,5 +1,4 @@
 ---
-title: "Home"
 pagination:
   data: languages
   size: 1
@@ -13,6 +12,7 @@ eleventyComputed:
       code: "{{ lang.code }}"
       lang: "{{ lang.lang }}"
       style: "{{ lang.style }}"
+  title: "{{ locale.btn_main[lang.code] }}"
 
 layout: "base.njk"
 ---
