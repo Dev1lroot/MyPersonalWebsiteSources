@@ -5,13 +5,19 @@
     <div class="content {{config.language.style}}">
         <div class="feed" v-if="page == ''">
           {% for article in articles %}
-            {% if article.language == config.language.code %}
+            {% if config.language.code | hasArticle(article.id) %}
               <article class="post">
-                  <p>{{ getArticle[article.filename] | safe }}</p>
+                  <a href="/{{ config.language.lang }}/article/{{ article.url[config.language.code] }}/"><h2>{{ article.title[config.language.code]  }}</h2></a>
+                  <p>{{ config.language.code | getArticle(article.id) | safe }}</p>
                   <p class="post-date"><b v-html="new Date({{ article.publishedAt }}).toLocaleDateString()"></b></p>
               </article>
             {% endif %}
           {% endfor %}
+        </div>
+        <div class="feed" v-if="page == 'bio'">
+          <article>
+            {{ config.language.code | getArticle('bio') | safe }}
+          </article>
         </div>
         <div class="feed" v-if="page == 'projects'">
           {% for project in projects %}

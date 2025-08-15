@@ -55,6 +55,20 @@
         "ko-KR": "소개",
         "ja-JP": "略歴"
     },
+    "btn_back": {
+        "en-GB": "Back",
+        "ru-RU": "Назад",
+        "fr-FR": "Retour",
+        "de-DE": "Zurück",
+        "uk-UA": "Назад",
+        "zh-CN": "返回",
+        "es-ES": "Atrás",
+        "he-IL": "חזור",
+        "ar-AE": "رجوع",
+        "hi-IN": "वापस",
+        "ko-KR": "뒤로",
+        "ja-JP": "戻る"
+    },
     "btn_projects": {
         "en-GB": "Projects",
         "ru-RU": "Проекты",

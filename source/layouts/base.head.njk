@@ -3,19 +3,19 @@
 <meta http-equiv="Content-Language" content="{{ config.language.code }}">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
-<meta name="keywords" content="David, {{ profile.name[config.language.code] }}, Eichendorf, David Eichendorf, Software Developer, Refugee, Activist">
+<meta name="description" content="{{ profile.seo_description[config.language.code] }}">
+<meta name="keywords" content="{{ profile.seo_keywords[config.language.code] }}">
 <meta name="author" content="{{ profile.name[config.language.code] }}">
 <meta name="robots" content="index, follow">
 
 <meta property="og:title" content="{{ profile.name[config.language.code] }}">
-<meta property="og:description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
+<meta property="og:description" content="{{ profile.seo_description[config.language.code] }}">
 <meta property="og:image" content="/assets/opengraph/placeholder.png">
 <meta property="og:url" content="{{ page.url | url }}">
 
 <meta name="twitter:card" content="/assets/opengraph/placeholder.png">
 <meta name="twitter:title" content="{{ profile.name[config.language.code] }}">
-<meta name="twitter:description" content="{{ profile.name[config.language.code] }} - Software Developer, Refugee">
+<meta name="twitter:description" content="{{ profile.seo_description[config.language.code] }}">
 <meta name="twitter:image" content="/assets/opengraph/placeholder.png">
 <title>{{ profile.name[config.language.code] }} | {{ title }}</title>
 <link rel="canonical" href="{{ page.url | url }}">
@@ -63,7 +63,7 @@
     "addressLocality": "{{ profile.city }}",
     "addressCountry": "{{ profile.country }}"
   },
-  "description": "{{ profile.description[config.language.code] }}"
+  "description": "{{ profile.seo_description[config.language.code] }}"
 }
 {% endif %}
 

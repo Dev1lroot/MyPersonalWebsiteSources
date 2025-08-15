@@ -1,20 +1,35 @@
 [
     {
-        "title": "Freedom of speech must be mutually respected",
-        "filename": "en-01.html",
-        "language": "en-GB",
-        "publishedAt": 0
-    },
-    {
-        "title": "La liberté d’expression doit être respectée mutuellement",
-        "filename": "fr-01.html",
-        "language": "fr-FR",
-        "publishedAt": 0
-    },
-    {
-        "title": "Préoccupation concernant la vérification de l'âge en France",
-        "filename": "fr-02.html",
-        "language": "fr-FR",
+        "id": "mutually-respected",
+        "enabled": true,
+        "url": {
+            "en-GB": "freedom-of-speech-must-be-mutually-respected",
+            "ru-RU": "svoboda-slova-dolzhna-byt-vzaimno-uvazhaema",
+            "fr-FR": "liberte-d-expression-doit-etre-respectee-mutuellement",
+            "de-DE": "meinungsfreiheit-muss-gegenseitig-respektiert-werden",
+            "uk-UA": "svoboda-slova-maye-buty-vzayemno-poshyana",
+            "zh-CN": "yuyan-ziyou-biangxiang-huixiang-zunzhong",
+            "es-ES": "la-libertad-de-expresion-debe-ser-respetada-mutualmente",
+            "he-IL": "khofesh-hadibur-ye-shuvah-mukabel",
+            "ar-AE": "hurriyat-altaebir-yajibu-an-tukram-mutual",
+            "hi-IN": "vani-ki-swatantrata-ko-aapsi-samman-karna-chahiye",
+            "ko-KR": "uhoe-jayu-ga-gongdong-jung-uihaeya-hamnida",
+            "ja-JP": "gengo-no-jiyuu-wa-sougou-teki-ni-sonkei-sare-ru-beki"
+        },
+        "title": {
+            "en-GB": "Freedom of speech must be mutually respected",
+            "ru-RU": "Свобода слова должна быть взаимно уважаема",
+            "fr-FR": "La liberté d'expression doit être respectée mutuellement",
+            "de-DE": "Meinungsfreiheit muss gegenseitig respektiert werden",
+            "uk-UA": "Свобода слова має бути взаємно пошанована",
+            "zh-CN": "言论自由必须相互尊重",
+            "es-ES": "La libertad de expresión debe ser respetada mutuamente",
+            "he-IL": "חופש הביטוי חייב להיות מכובד הדדית",
+            "ar-AE": "يجب احترام حرية التعبير بشكل متبادل",
+            "hi-IN": "वाणी की स्वतंत्रता का आपसी सम्मान होना चाहिए",
+            "ko-KR": "언론의 자유는 상호 존중되어야 합니다",
+            "ja-JP": "言論の自由は相互に尊重されるべきです"
+        },
         "publishedAt": 0
     }
 ]

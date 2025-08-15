@@ -3,7 +3,7 @@ pagination:
   data: collections.processedProjects
   size: 1
   alias: item
-permalink: "{{ item.url }}"
+permalink: "/{{ item.language.lang }}/projects/{{ item.project.id }}/index.html"
 
 eleventyComputed:
   config:

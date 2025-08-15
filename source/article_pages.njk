@@ -1,0 +1,23 @@
+---
+pagination:
+  data: collections.processedArticles
+  size: 1
+  alias: item
+permalink: "/{{ item.language.lang }}/article/{{ item.article.url[item.language.code] }}/index.html"
+
+eleventyComputed:
+  config:
+    jsp: ""
+    schema: "article"
+    language:
+      code: "{{ item.language.code }}"
+      lang: "{{ item.language.lang }}"
+      style: "{{ item.language.style }}"
+  article: true
+  title: "{{ item.article.title[item.language.code] }}"
+  description: ""
+
+layout: "base.njk"
+---
+<h1>{{ item.article.title[item.language.code] }}</h1><br>
+{{ item.language.code | getArticle(item.article.id) | safe }}
