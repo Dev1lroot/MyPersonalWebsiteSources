@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Dev1lroot Writing System</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="caret.jquery.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap-grid.min.css">
+	<link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+	<div class="navbar mb-3">
+		<div class="container">
+			<div class="col-12">
+				<h3>Dev1lroot Writing System</h3>
+			</div>
+			<div class="row">
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<label>Ordering:</label><br>
+					<select id="ordering">
+						<option value="1">Тор Down</option>
+						<option value="2" selected="selected">Left Right</option>
+						<option value="3">Right Left</option>
+					</select>
+				</div>
+				<div class="col-lg-6 col-md-6 col-sm-12">
+					<label>Linebreak:</label><br>
+					<select id="linebreak">
+						<option value="1">By Whitespace</option>
+						<option value="2" selected="selected">By Return</option>
+					</select>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container fields">
+		<div class="row">
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<textarea id="input"></textarea>
+			</div>
+			<div class="col-lg-6 col-md-6 col-sm-12">
+				<div class="output" id="output"></div>
+				<div class="keys">
+					<div class="keyboard">
+						<button class="btn" title="Y"><div class="consonant j"></div></button>
+						<button class="btn" title="A"><div class="consonant a"></div></button>
+						<button class="btn" title="O"><div class="consonant o"></div></button>
+						<button class="btn" title="U"><div class="consonant u "></div></button>
+						<button class="btn" title="E"><div class="consonant e "></div></button>
+						<button class="btn" title="AE"><div class="consonant ä"></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="B"><div class="consonant b"></div></button>
+						<button class="btn" title="P"><div class="consonant p"></div></button>
+						<button class="btn" title="F"><div class="consonant f "></div></button>
+						<button class="btn" title="V"><div class="consonant v "></div></button>
+						<button class="btn" title="FT"><div class="consonant ft "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="D"><div class="consonant d"></div></button>
+						<button class="btn" title="T"><div class="consonant t"></div></button>
+						<button class="btn" title="TH"><div class="consonant þ "></div></button>
+						<button class="btn" title="C"><div class="consonant c "></div></button>
+						<button class="btn" title="CH"><div class="consonant č "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="H"><div class="consonant h"></div></button>
+						<button class="btn" title="K"><div class="consonant k"></div></button>
+						<button class="btn" title="KH"><div class="consonant ķ "></div></button>
+						<button class="btn" title="KS"><div class="consonant x "></div></button>
+						<button class="btn" title="KN"><div class="consonant ʞ "></div></button>
+						<button class="btn" title="KR"><div class="consonant ƙ "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="S"><div class="consonant s"></div></button>
+						<button class="btn" title="SH"><div class="consonant š"></div></button>
+						<button class="btn" title="Z"><div class="consonant z "></div></button>
+						<button class="btn" title="ZH"><div class="consonant ž "></div></button>
+						<button class="btn" title="SK"><div class="consonant ȿ "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="G"><div class="consonant g"></div></button>
+						<button class="btn" title="G - Ukrainian"><div class="consonant ĝ"></div></button>
+						<button class="btn" title="R"><div class="consonant r "></div></button>
+						<button class="btn" title="RN"><div class="consonant ʁ "></div></button>
+						<button class="btn" title="GN"><div class="consonant ʮ "></div></button>
+						<button class="btn" title="GHN"><div class="consonant ʯ "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="L"><div class="consonant l"></div></button>
+						<button class="btn" title="M"><div class="consonant m"></div></button>
+						<button class="btn" title="MZ"><div class="consonant ɯ "></div></button>
+						<button class="btn" title="N"><div class="consonant n "></div></button>
+						<button class="btn" title="NG"><div class="consonant ŋ "></div></button>
+						<button class="btn" title="HGH"><div class="consonant ɲ "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="A"><div class="vowel va"></div></button>
+						<button class="btn" title="O"><div class="vowel vo"></div></button>
+						<button class="btn" title="U"><div class="vowel vu "></div></button>
+						<button class="btn" title="I"><div class="vowel vi "></div></button>
+					</div>
+					<div class="keyboard">
+						<button class="btn" title="E"><div class="vowel ve "></div></button>
+						<button class="btn" title="AE"><div class="vowel vä"></div></button>
+						<button class="btn" title="EO"><div class="vowel vö"></div></button>
+						<button class="btn" title="EI"><div class="vowel vı"></div></button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		var vowels = "aouieäöı";
+		var consonants = "jbpfɈvdtþhkķʞƙxsšȿzžgĝrʁʯʮlmɯnŋɲcč§~ ";
+		var definedLinebreakCharacter = " ";
+
+		var ordering = $("select#ordering").children("option:selected").val();
+		var linebreak = $("select#linebreak").children("option:selected").val();
+		if (linebreak == 1)
+		{
+		    definedLinebreakCharacter = " ";
+		}
+		else
+		{
+		    definedLinebreakCharacter = "~";
+		}
+		function redraw(){
+			$("#output").empty();
+
+			var objText = parseObjectiveString(parseText($("#input").val()));
+			var r = 1;
+
+			$("#output").append('<div class="paragraph" id="row1"></div>');
+			for (var i = 0; i < objText.length; i++)
+			{
+				var thisObject = objText[i];
+				if (thisObject.letter == definedLinebreakCharacter) {
+					r++
+					$("#output").append('<div class="paragraph" id="row'+r+'"></div>');
+				}
+				else
+				{
+						$("#row"+r).append('<div id="letter'+i+'" class="consonant '+thisObject.letter+'"></div>');
+				}
+			}
+
+			for (var i = 0; i < objText.length; i++)
+			{
+				var thisObject = objText[i];
+				if (thisObject !== undefined){
+					for (var v = 0; v < thisObject.vowels.length; v++)
+					{
+						if (thisObject.vowelpositions.includes(6) && thisObject.vowelpositions.includes(7) && thisObject.vowels.length < 2)
+						{
+							$("#letter"+i).append('<div class="vowel pos5 v'+thisObject.vowels[v]+'"></div>');
+						}
+						else
+						{
+							$("#letter"+i).append('<div class="vowel pos'+thisObject.vowelpositions[v]+' v'+thisObject.vowels[v]+'"></div>');
+						}
+					}
+				}
+			}
+			reorder(ordering);
+		}
+		function reorder(ordering)
+		{
+			if (ordering == 1)
+			{
+		        $(".paragraph").css("height","unset");
+		        $(".paragraph").css("display","inline-block");
+		        $(".paragraph").css("vertical-align", "text-top");
+		        $(".consonant").css("display","block");
+		        $(".consonant").css("float","unset");
+		    }
+		    else
+		    {
+		        $(".paragraph").css("height","24px");
+		        $(".paragraph").css("display","block");
+		        $(".paragraph").css("vertical-align", "unset");
+		        $(".consonant").css("display","inline-block");
+		        if (ordering == 3){
+		        	$(".consonant").css("float","right");
+		        }
+		        else
+		        {
+		        	$(".consonant").css("float","left");
+		        }
+		    }
+		}
+		function parseText(text)
+		{
+			text = "§"+text;
+
+			text = text.toLowerCase();
+
+			// транслитерация русских звуков
+			text = text.replace(/а/g,"a");
+			text = text.replace(/б/g,"b");
+			text = text.replace(/в/g,"v");
+			text = text.replace(/г/g,"g");
+			text = text.replace(/д/g,"d");
+			text = text.replace(/кс/g,"x");
+			text = text.replace(/ье/g,"je");
+			text = text.replace(/ъе/g,"je");
+			text = text.replace(/е/g,"e");
+			text = text.replace(/ё/g,"ö");
+			text = text.replace(/ж/g,"zh");
+			text = text.replace(/з/g,"z");
+			text = text.replace(/и/g,"i");
+			text = text.replace(/й/g,"j");
+			text = text.replace(/к/g,"k");
+			text = text.replace(/л/g,"l");
+			text = text.replace(/м/g,"m");
+			text = text.replace(/н/g,"n");
+			text = text.replace(/ьо/g,"jo");
+			text = text.replace(/ъо/g,"jo");
+			text = text.replace(/о/g,"o");
+			text = text.replace(/п/g,"p");
+			text = text.replace(/р/g,"r");
+			text = text.replace(/с/g,"s");
+			text = text.replace(/т/g,"t");
+			text = text.replace(/у/g,"u");
+			text = text.replace(/ф/g,"f");
+			text = text.replace(/х/g,"kh");
+			text = text.replace(/ц/g,"c");
+			text = text.replace(/ч/g,"ch");
+			text = text.replace(/ш/g,"sh");
+			text = text.replace(/щ/g,"sch");
+			text = text.replace(/ъ/g,"");
+			text = text.replace(/ы/g,"ı");
+			text = text.replace(/ь/g,"'");
+			text = text.replace(/э/g,"ae");
+			text = text.replace(/ю/g,"ju");
+			text = text.replace(/я/g,"ja");
+			
+			// транслитерация польских и чешских звуков
+			text = text.replace(/cz/g,"č");
+
+			// транслитерация латинских звуков
+			text = text.replace(/q/g,"c");
+
+			// транслитерация специальных латинских звуков
+			text = text.replace(/ae/g,"ä");
+			text = text.replace(/'o/g,"ö");
+			text = text.replace(/'ö/g,"jo");
+			text = text.replace(/th/g,"þ");
+			text = text.replace(/kh/g,"ķ");
+			text = text.replace(/sh/g,"š");
+			text = text.replace(/sk/g,"ȿ");
+			text = text.replace(/zh/g,"ž");
+			text = text.replace(/ngh/g,"ɲ");
+			text = text.replace(/ghn/g,"ʯ");
+			text = text.replace(/ng/g,"ŋ");
+			text = text.replace(/gn/g,"ʮ");
+			text = text.replace(/gh/g,"ĝ");
+			text = text.replace(/kn/g,"ʞ");
+			text = text.replace(/kr/g,"ƙ");
+			text = text.replace(/rn/g,"ʁ");
+			text = text.replace(/mz/g,"ɯ");
+			text = text.replace(/ft/g,"Ɉ");
+			text = text.replace(/ch/g,"č");
+			text = text.replace(/y/g,"j");
+			text = text.replace(/w/g,"v");
+
+			//транслитерация пробелов
+			text = text.replace(/\n/g,"~");
+			return text;
+		}
+		function parseObjectiveString(text)
+		{
+			var objText = [];
+
+			$("#output").empty();
+
+			for (var i = 0; i < text.length; i++)
+			{
+				if (consonants.includes(text.charAt(i)))
+				{
+					var letter = new Letter(text.charAt(i));
+					objText.push(letter);	
+				}
+				else
+				{
+					if (vowels.includes(text.charAt(i)))
+					{
+						if (objText[objText.length-1].getCapacity() > 0){
+								objText[objText.length-1].addVowel(text.charAt(i));
+						}
+						else
+						{
+							if (text.charAt(i) == "ö") {
+									var letter = new Letter("j");
+									letter.addVowel(text.charAt(i));
+									objText.push(letter);
+							}
+							else
+							{
+								if (text.charAt(i) == "a") {
+										var letter = new Letter("a");
+										objText.push(letter);
+								}
+								else if (text.charAt(i) == "o") {
+										var letter = new Letter("o");
+										objText.push(letter);
+								}
+								else if (text.charAt(i) == "e") {
+										var letter = new Letter("e");
+										objText.push(letter);
+								}
+								else if (text.charAt(i) == "ä") {
+										var letter = new Letter("ä");
+										objText.push(letter);
+								}
+								else if (text.charAt(i) == "u") {
+										var letter = new Letter("u");
+										objText.push(letter);
+								}
+								else
+								{
+										var letter = new Letter("h");
+										letter.addVowel(text.charAt(i));
+										objText.push(letter);
+								}
+							}
+						}
+					}
+				}
+			}
+			return objText;
+		}
+		class Letter{
+			constructor(letter){
+				this.letter = letter;
+				this.vowels = [];
+				this.vowelpositions = [];
+
+				if (letter == "j")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "b")
+				{
+					this.vowelpositions = [1];
+				}
+				if (letter == "p")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "f")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "Ɉ")
+				{
+					this.vowelpositions = [3,7];
+				}
+				if (letter == "v")
+				{
+					this.vowelpositions = [4];
+				}
+				if (letter == "d")
+				{
+					this.vowelpositions = [3,0];
+				}
+				if (letter == "t")
+				{
+					this.vowelpositions = [1,2,3,4];
+				}
+				if (letter == "t")
+				{
+					this.vowelpositions = [1,2,3,4];
+				}
+				if (letter == "þ")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "þ")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "h")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "k")
+				{
+					this.vowelpositions = [80,4];
+				}
+				if (letter == "ķ")
+				{
+					this.vowelpositions = [80,4];
+				}
+				if (letter == "ʞ")
+				{
+					this.vowelpositions = [4];
+				}
+				if (letter == "ƙ")
+				{
+					this.vowelpositions = [80];
+				}
+				if (letter == "s")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "ȿ")
+				{
+					this.vowelpositions = [80];
+				}
+				if (letter == "ž")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "g")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "ĝ")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "ʮ")
+				{
+					this.vowelpositions = [80,90];
+				}
+				if (letter == "ʯ")
+				{
+					this.vowelpositions = [80,90];
+				}
+				if (letter == "r")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "ʁ")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "l")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "m")
+				{
+					this.vowelpositions = [1,9];
+				}
+				if (letter == "ɯ")
+				{
+					this.vowelpositions = [1];
+				}
+				if (letter == "n")
+				{
+					this.vowelpositions = [3,8];
+				}
+				if (letter == "ŋ")
+				{
+					this.vowelpositions = [8,9];
+				}
+				if (letter == "ɲ")
+				{
+					this.vowelpositions = [8,9];
+				}
+				if (letter == "c")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "č")
+				{
+					this.vowelpositions = [3];
+				}
+				if (letter == "š")
+				{
+					this.vowelpositions = [6,7];
+				}
+				if (letter == "z")
+				{
+					this.vowelpositions = [6,7];
+				}
+
+
+				this.capacity = this.vowelpositions.length
+			}
+			addVowel(w){
+				this.capacity = this.vowelpositions.length - this.vowels.length;
+				if (this.capacity > 0){
+					this.vowels.push(w);
+				}
+			}
+			getCapacity(){
+				this.capacity = this.vowelpositions.length - this.vowels.length;
+				return this.capacity;
+			}
+		}
+		$(document).ready(function()
+		{
+			redraw();
+		    $("select#ordering").change(function()
+		    {
+		        ordering = $(this).children("option:selected").val();
+		        reorder(ordering);
+
+		    });
+		    $("select#linebreak").change(function()
+		    {
+		        linebreak = $(this).children("option:selected").val();
+		        if (linebreak == 1)
+		        {
+		        	definedLinebreakCharacter = " ";
+		        }
+		        else
+		        {
+		        	definedLinebreakCharacter = "~";
+		        }
+		        redraw();
+
+		    });
+			$("#input").bind('input propertychange', function()
+			{
+				redraw();
+			});
+			$(".btn").each(function(){
+				$(this).on("click",function(){
+					var letter = $(this).find('div').attr('class').replace("btn", "").replace("consonant","").replace("vowel","").replace(/[\s]/g,"");
+					if($(this).find('div').hasClass("vowel"))
+					{
+						letter = letter.replace("vowel","").replace("v","").replace(/[\s]/g,"");
+					}
+					var data = "";
+					var text = $("#input").val();
+					var cpos = $('#input').prop("selectionStart");
+					var i = 1;
+					for(var l of text)
+					{
+						data += l
+						if(i == cpos)
+						{
+							data += letter
+						}
+						i++
+					}
+					if(data == "")
+					{
+						data += letter;
+						cpos++;
+					}
+					$("#input").val(data);
+					$("#input").focus();
+					$('#input').selectRange(cpos+1);
+					//$("#input").val($("#input").val()+letter);
+					redraw();
+				});
+			})
+		});
+	</script>
+</body>
+</html>

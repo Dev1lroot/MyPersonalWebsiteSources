@@ -1,5 +1,38 @@
 [
     {
+        "id": "democracy-not-a-value",
+        "enabled": true,
+        "url": {
+            "en-GB": "democracy-is-not-a-value",
+            "ru-RU": "demokratiya-ne-yavlyaetsya-cennostyu",
+            "fr-FR": "la-democratie-n-est-pas-une-valeur",
+            "de-DE": "demokratie-ist-kein-wert",
+            "uk-UA": "demokratiya-ne-ye-cinnistyu",
+            "zh-CN": "minzhu-bingfei-jiazhi",
+            "es-ES": "la-democracia-no-es-un-valor",
+            "he-IL": "demokratyah-einah-erekh",
+            "ar-AE": "al-dimuqratiya-laysat-qimah",
+            "hi-IN": "loktantra-ek-mulya-nahi-hai",
+            "ko-KR": "minjujuui-neun-gachi-ga-anida",
+            "ja-JP": "minshushugi-wa-kachi-dewa-nai"
+        },
+        "title": {
+            "en-GB": "Democracy is not a value",
+            "ru-RU": "Демократия не является ценностью",
+            "fr-FR": "La démocratie n'est pas une valeur",
+            "de-DE": "Demokratie ist kein Wert",
+            "uk-UA": "Демократія не є цінністю",
+            "zh-CN": "民主并非价值",
+            "es-ES": "La democracia no es un valor",
+            "he-IL": "דמוקרטיה אינה ערך",
+            "ar-AE": "الديمقراطية ليست قيمة",
+            "hi-IN": "लोकतंत्र एक मूल्य नहीं है",
+            "ko-KR": "민주주의는 가치가 아니다",
+            "ja-JP": "民主主義は価値ではない"
+        },
+        "publishedAt": 1757100873000
+    },
+    {
         "id": "mutually-respected",
         "enabled": true,
         "url": {

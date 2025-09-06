@@ -5,7 +5,7 @@
     </div>
     <div class="languages">
         {% for language in languages %}
-        <a alt="{{ language.name }}" href="{{ page.url.replace(config.language.lang,language.lang) }}">
+        <a alt="{{ language.name }}" title="{{ language.name }}" href="{{ page.url.replace(config.language.lang,language.lang) }}">
             <i style="background-image: url(/assets/flags/{{ language.flag }}.svg)"></i>
             <span>{{ language.name }}</span>
         </a>

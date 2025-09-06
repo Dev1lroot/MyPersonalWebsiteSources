@@ -1,0 +1,319 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	margin: 0px;
+	padding: 0px;
+}
+textarea, .output{
+	resize: none;
+	border: none;
+	padding: 16px;
+	width: 100%;
+	min-height: 300px;
+	overflow-y:  scroll;
+	max-height: 300px;
+	padding-right: 2px;
+	background-color: #eee;
+}
+.§{
+	display: none !important;
+}
+.fields{
+	margin-top: 24px;
+}
+.consonant{
+	position: relative;
+	background: url(consonants.png);
+	image-rendering: crisp-edges;
+	display: block;
+	width: 16px !important;
+	height: 24px !important;
+}
+.vowel{
+	position: absolute;
+	background: url(vowels_new.png);
+	image-rendering: crisp-edges;
+	display: inline-block;
+	width: 7px !important;
+	height: 7px !important;
+}
+
+.pos1{
+	top: 2px;
+	left: 0px;
+}
+.pos2{
+	top: 2px;
+	right: 0px;
+}
+.pos3{
+	bottom: 0px;
+	left: 0px;
+}
+.pos4{
+	bottom: 0px;
+	right: 0px;
+}
+.pos5{
+	top: calc(50% - 4px);
+	left: calc(50% - 4px);
+}
+.pos6{
+	top: calc(50% - 7px);
+	left: calc(50% - 4px);
+}
+.pos7{
+	top: calc(50%);
+	left: calc(50% - 4px);
+}
+.pos8{
+	top: calc(50% - 7px);
+	right: 0px;
+}
+.pos9{
+	top: calc(50% + 1px);
+	right: 0px;
+}
+.pos0{
+	top: calc(50% - 4px);
+	right: 0px;
+}
+.pos80{
+	top: calc(50% - 7px);
+	left: 0px;
+}
+.pos90{
+	top: calc(50% + 1px);
+	left: 0px;
+}
+.pos10{
+	top: calc(50% - 4px);
+	left: 0px;
+}
+
+
+.va{
+	background-position-x: 0px;
+}
+.vo{
+	background-position-x: -7px;
+}
+.vu{
+	background-position-x: -14px;
+}
+.vi{
+	background-position-x: -21px;
+}
+.ve{
+	background-position-x: -28px;
+}
+
+.vä{
+	background-position-x: -28px;
+	background-position-y: -7px;
+}
+.vö{
+	background-position-x: -7px;
+	background-position-y: -7px;
+}
+.vı{
+	background-position-x: -21px;
+	background-position-y: -7px;
+}	
+
+.§{
+	width: 0px;
+	height: 0px;
+}
+.a{
+	background-position-x: -32px;
+	background-position-y: 0px;
+}
+.j{
+	background-position-x: -32px;
+	background-position-y: -24px;
+	width: 4px !important;
+}
+.o{
+	background-position-x: -32px;
+	background-position-y: -48px;
+}
+.e{
+	background-position-x: -32px;
+	background-position-y: -72px;
+}
+.ä{
+	background-position-x: -32px;
+	background-position-y: -96px;
+}
+.u{
+	background-position-x: -32px;
+	background-position-y: -120px;
+}
+
+.b{
+	background-position-x: -64px;
+	background-position-y: 0px;
+}
+.p{
+	background-position-x: -64px;
+	background-position-y: -24px;
+}
+.f{
+	background-position-x: -64px;
+	background-position-y: -48px;
+}
+.v{
+	background-position-x: -64px;
+	background-position-y: -72px;
+}
+.Ɉ, .ft{ /* FT */
+	background-position-x: -64px;
+	background-position-y: -96px;
+}
+
+.d{
+	background-position-x: -96px;
+	background-position-y: 0px;
+}
+.t{
+	background-position-x: -96px;
+	background-position-y: -24px;
+}
+.þ{ /* TH */
+	background-position-x: -96px;
+	background-position-y: -48px;
+}
+
+.h{
+	background-position-x: -128px;
+	background-position-y: 0px;
+}
+.k{
+	background-position-x: -128px;
+	background-position-y: -24px;
+}
+.ķ{
+	background-position-x: -128px;
+	background-position-y: -48px;
+}
+.x{
+	background-position-x: -128px;
+	background-position-y: -72px;
+}
+.ʞ{ /* KN */
+	background-position-x: -128px;
+	background-position-y: -96px;
+}
+.ƙ{ /* KR */
+	background-position-x: -128px;
+	background-position-y: -120px;
+}
+
+.s{
+	background-position-x: -160px;
+	background-position-y: 0px;
+}
+.š{
+	background-position-x: -160px;
+	background-position-y: -24px;
+}
+.z{
+	background-position-x: -160px;
+	background-position-y: -48px;
+}
+.ž{
+	background-position-x: -160px;
+	background-position-y: -72px;
+}
+.ȿ{ /* SK */
+	background-position-x: -160px;
+	background-position-y: -96px;
+}
+.c{
+	background-position-x: -256px;
+	background-position-y: 0px;
+}
+.č{
+	background-position-x: -256px;
+	background-position-y: -24px;
+}
+
+.g{
+	background-position-x: -192px;
+	background-position-y: 0px;
+}
+.ĝ{
+	background-position-x: -192px;
+	background-position-y: -24px;
+}
+.r{
+	background-position-x: -192px;
+	background-position-y: -48px;
+}
+.ʁ{ /* RN */
+	background-position-x: -192px;
+	background-position-y: -72px;
+}
+.ʮ{ /* GN */
+	background-position-x: -192px;
+	background-position-y: -96px;
+}
+.ʯ{ /* GHN */
+	background-position-x: -192px;
+	background-position-y: -120px;
+}
+
+
+.l{
+	background-position-x: -224px;
+	background-position-y: 0px;
+}
+.m{
+	background-position-x: -224px;
+	background-position-y: -24px;
+}
+.n{
+	background-position-x: -224px;
+	background-position-y: -48px;
+}
+.ŋ{ /* NG */
+	background-position-x: -224px;
+	background-position-y: -72px;
+}
+.ɯ{ /* MZ */
+	background-position-x: -224px;
+	background-position-y: -120px;
+}
+.ɲ{ /* NGH */
+	background-position-x: -224px;
+	background-position-y: -96px;
+}
+.btn{
+	display: flex !important;
+	float: unset !important;
+	margin: 4px 2px;
+	border: 1px solid #DDD;
+	background-color: #FFF;
+	border-radius: 4px;
+	width: 48px;
+	height: 32px;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+}
+.btn:hover{
+	border-color: #777;
+}
+.btn:active{
+	background-color: #999;
+}
+.keys{
+	margin-top: 24px;
+	display: flex;
+	flex-wrap: wrap;
+	border: 1px solid #DDD;
+	padding: 2px 4px;
+	border-radius: 4px;
+}
